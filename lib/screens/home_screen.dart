@@ -66,7 +66,8 @@ class HomeScreen extends StatelessWidget {
                         // Celebration Rings
                         Container(
                           width: MediaQuery.of(context).size.width * 0.45 * 1.1,
-                          height: MediaQuery.of(context).size.width * 0.45 * 1.1,
+                          height:
+                              MediaQuery.of(context).size.width * 0.45 * 1.1,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             border: Border.all(
@@ -76,7 +77,7 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        
+
                         // Confetti Particles
                         Positioned(
                           top: 20,
@@ -93,7 +94,7 @@ class HomeScreen extends StatelessWidget {
                           left: 40,
                           child: _buildConfetti(Colors.cyan, context),
                         ),
-                        
+
                         // Main Celebration Icon
                         const Icon(
                           Icons.celebration,
@@ -110,34 +111,33 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  
+
                   const SizedBox(height: 30),
-                  
+
                   // Title with Excitement
                   ShaderMask(
                     shaderCallback: (bounds) => const LinearGradient(
                       colors: [
+                        Color(0xFFFFFFFF), // White
                         Color(0xFFFFD700), // Gold
-                        Color(0xFFFF8C00), // Dark Orange
-                        Color(0xFFFF1493), // Deep Pink
                       ],
-                      stops: [0.0, 0.5, 1.0],
+                      stops: [0.0, 1.0],
                     ).createShader(bounds),
                     child: Text(
                       '🎉 Congratulations! 🎉',
                       style: TextStyle(
                         fontSize: MediaQuery.of(context).size.width * 0.08,
                         fontWeight: FontWeight.w900,
-                        color
+                        color: Colors.white,
                         letterSpacing: 1.2,
                         height: 1.3,
                       ),
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  
+
                   const SizedBox(height: 15),
-                  
+
                   // Energetic Subtitle
                   Container(
                     padding: const EdgeInsets.symmetric(
@@ -146,10 +146,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     decoration: BoxDecoration(
                       gradient: const LinearGradient(
-                        colors: [
-                          Color(0xFFFF416C),
-                          Color(0xFFFF4B2B),
-                        ],
+                        colors: [Color(0xFFFF416C), Color(0xFFFF4B2B)],
                         begin: Alignment.centerLeft,
                         end: Alignment.centerRight,
                       ),
@@ -189,9 +186,9 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  
+
                   const SizedBox(height: 30),
-                  
+
                   // Celebration Message Card
                   Container(
                     width: double.infinity,
@@ -200,10 +197,7 @@ class HomeScreen extends StatelessWidget {
                       gradient: const LinearGradient(
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
-                        colors: [
-                          Colors.white,
-                          Color(0xFFFFF8E1),
-                        ],
+                        colors: [Colors.white, Color(0xFFFFF8E1)],
                       ),
                       borderRadius: BorderRadius.circular(30),
                       boxShadow: [
@@ -232,14 +226,18 @@ class HomeScreen extends StatelessWidget {
                           children: [
                             Icon(Icons.star, color: Colors.amber, size: 30),
                             const SizedBox(width: 15),
-                            Icon(Icons.emoji_events, color: Colors.blue, size: 35),
+                            Icon(
+                              Icons.emoji_events,
+                              color: Colors.blue,
+                              size: 35,
+                            ),
                             const SizedBox(width: 15),
                             Icon(Icons.star, color: Colors.amber, size: 30),
                           ],
                         ),
-                        
+
                         const SizedBox(height: 20),
-                        
+
                         // Energetic Message
                         const Text(
                           'YES! 🚀 You did it!',
@@ -251,9 +249,9 @@ class HomeScreen extends StatelessWidget {
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        
+
                         const SizedBox(height: 15),
-                        
+
                         Text(
                           'Selamat! Anda telah berhasil menyelesaikan onboarding dan memahami dasar-dasar layout Flutter dengan luar biasa!',
                           textAlign: TextAlign.center,
@@ -265,9 +263,9 @@ class HomeScreen extends StatelessWidget {
                             letterSpacing: 0.3,
                           ),
                         ),
-                        
+
                         const SizedBox(height: 20),
-                        
+
                         // Party Popper
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -284,9 +282,9 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  
+
                   const SizedBox(height: 35),
-                  
+
                   // Next Adventure Section
                   Container(
                     padding: const EdgeInsets.all(20),
@@ -309,11 +307,7 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Row(
                           children: [
-                            Icon(
-                              Icons.bolt,
-                              color: Colors.yellow,
-                              size: 30,
-                            ),
+                            Icon(Icons.bolt, color: Colors.yellow, size: 30),
                             const SizedBox(width: 15),
                             Expanded(
                               child: Text(
@@ -328,9 +322,9 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ],
                         ),
-                        
+
                         const SizedBox(height: 15),
-                        
+
                         Text(
                           'State management, API integration, and advanced animations await you!',
                           style: TextStyle(
@@ -344,9 +338,9 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  
+
                   const SizedBox(height: 40),
-                  
+
                   // Energetic Buttons
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -354,7 +348,10 @@ class HomeScreen extends StatelessWidget {
                       // Main Action Button
                       ElevatedButton(
                         onPressed: () {
-                          Navigator.pushReplacementNamed(context, '/onboarding');
+                          Navigator.pushReplacementNamed(
+                            context,
+                            '/onboarding',
+                          );
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFFFF416C),
@@ -387,9 +384,9 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  
+
                   const SizedBox(height: 20),
-                  
+
                   // Fun Progress Dots
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -405,9 +402,9 @@ class HomeScreen extends StatelessWidget {
                       _buildProgressDot(Colors.blue, true, context),
                     ],
                   ),
-                  
+
                   const SizedBox(height: 30),
-                  
+
                   // Celebration Emojis
                   Wrap(
                     spacing: 15,
@@ -449,11 +446,7 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget _buildPartyPopper(Color color) {
-    return Icon(
-      Icons.confirmation_number,
-      color: color,
-      size: 28,
-    );
+    return Icon(Icons.confirmation_number, color: color, size: 28);
   }
 
   Widget _buildProgressDot(Color color, bool isActive, BuildContext context) {
