@@ -4,7 +4,6 @@ class Page2 extends StatelessWidget {
   const Page2({super.key});
 
   @override
-  @override
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
@@ -53,7 +52,7 @@ class Page2 extends StatelessWidget {
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
-                     Container(
+                    Container(
                       width: 140,
                       height: 140,
                       decoration: BoxDecoration(
@@ -83,7 +82,7 @@ class Page2 extends StatelessWidget {
               const SizedBox(height: 40),
 
               // Title
-               ShaderMask(
+              ShaderMask(
                 shaderCallback: (bounds) => const LinearGradient(
                   colors: [
                     Color(0xFFE0F2F1), // Light Teal
@@ -110,7 +109,7 @@ class Page2 extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                   gradient: LinearGradient(
+                  gradient: LinearGradient(
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                     colors: [
@@ -119,29 +118,33 @@ class Page2 extends StatelessWidget {
                     ],
                   ),
                   borderRadius: BorderRadius.circular(20),
-                  border: Border.all(
-                    color: Colors.white.withOpacity(0.1),
-                  ),
+                  border: Border.all(color: Colors.white.withOpacity(0.1)),
                 ),
                 child: Column(
                   children: [
                     _buildFeatureItem(
-                      'UI/UX: Membangun antarmuka pengguna yang menarik dan responsif.',
+                      'UI/UX: Membangun antarmuka pengguna yang menarik dan responsif (Contoh: Column, Row, Image, Text).',
                     ),
-                     _buildFeatureItem(
-                      'Logic: Menangani logika aplikasi dan interaksi data.',
+                    _buildFeatureItem(
+                      'Bussiness Logic : Menangani logika aplikasi dan interaksi data (Contoh: State Management).',
                     ),
-                     _buildFeatureItem(
-                      'Native: Mengakses fitur kameras, GPS, dan penyimpanan.',
+                    _buildFeatureItem(
+                      'Native Features: Mengakses fitur perangkat keras dan perangkat lunak (Contoh: Kamera, GPS, Penyimpanan).',
                     ),
-                     _buildFeatureItem(
-                      'Data: Mengelola penyimpanan data lokal dan jarak jauh.',
+                    _buildFeatureItem(
+                      'Data Layer: Mengelola penyimpanan data lokal dan jarak jauh (Contoh: SQLite, Firebase).',
+                    ),
+                    _buildFeatureItem(
+                      'Performance & Quality: Mengoptimalkan kinerja aplikasi dan memastikan kualitas tinggi.',
+                    ),
+                    _buildFeatureItem(
+                      'Arsitektur & Prinsip Lanjutan: Menerapkan pola arsitektur dan prinsip desain untuk skalabilitas dan pemeliharaan.',
                     ),
                   ],
                 ),
               ),
-               
-               const SizedBox(height: 80), // Space for Navbar
+
+              const SizedBox(height: 80), // Space for Navbar
             ],
           ),
         ),
@@ -150,7 +153,7 @@ class Page2 extends StatelessWidget {
   }
 
   Widget _buildFeatureItem(String text) {
-     final parts = text.split(': ');
+    final parts = text.split(': ');
     final title = parts.isNotEmpty ? parts[0] : '';
     final description = parts.length > 1 ? parts.sublist(1).join(': ') : '';
 
@@ -196,7 +199,7 @@ class Page2 extends StatelessWidget {
                     TextSpan(
                       text: description,
                       style: const TextStyle(
-                        fontSize: 15, 
+                        fontSize: 15,
                         color: Colors.white70,
                         height: 1.4,
                       ),

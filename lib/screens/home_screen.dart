@@ -124,7 +124,7 @@ class HomeScreen extends StatelessWidget {
                       stops: [0.0, 1.0],
                     ).createShader(bounds),
                     child: Text(
-                      '🎉 Congratulations! 🎉',
+                      'Congratulations! 🎉',
                       style: TextStyle(
                         fontSize: MediaQuery.of(context).size.width * 0.08,
                         fontWeight: FontWeight.w900,
@@ -160,7 +160,6 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                     child: Row(
-                      mainAxisSize: MainAxisSize.min,
                       children: [
                         const Icon(
                           Icons.rocket_launch,
@@ -168,13 +167,18 @@ class HomeScreen extends StatelessWidget {
                           size: 20,
                         ),
                         const SizedBox(width: 8),
-                        Text(
-                          'FLUTTER MASTER ACHIEVED!',
-                          style: TextStyle(
-                            fontSize: MediaQuery.of(context).size.width * 0.04,
-                            fontWeight: FontWeight.w800,
-                            color: Colors.white,
-                            letterSpacing: 1.1,
+                        Flexible(
+                          child: Text(
+                            'FLUTTER MASTER ACHIEVED!',
+                            style: TextStyle(
+                              fontSize:
+                                  MediaQuery.of(context).size.width * 0.04,
+                              fontWeight: FontWeight.w800,
+                              color: Colors.white,
+                              letterSpacing: 1.1,
+                            ),
+                            textAlign: TextAlign.center,
+                            softWrap: true,
                           ),
                         ),
                         const SizedBox(width: 8),
@@ -240,7 +244,7 @@ class HomeScreen extends StatelessWidget {
 
                         // Energetic Message
                         const Text(
-                          'YES! 🚀 You did it!',
+                          'YES! You did it! 🚀',
                           style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.w800,

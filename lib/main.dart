@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Your App Name',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        fontFamily: 'Poppins',
+        fontFamily: 'Times New Roman',
       ),
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
